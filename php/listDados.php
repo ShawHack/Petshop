@@ -1,12 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header('Content-Type: text/html; charset=utf-8');
-$host = "mysql:host=localhost;dbname=petshop";
-$usuario = "root";
-$senha = "alicinha";
-try {
-	$conexao = new PDO($host, $usuario, $senha);
 
+try {
+	require 'config.php';
 	if(!$conexao){
 		echo "Não foi possivel conectar com Banco de Dados!";
 	}		

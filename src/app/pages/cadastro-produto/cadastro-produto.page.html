@@ -1,9 +1,40 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>cadastro_produto</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Publicar produtos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-list>
+  <form [formGroup]="postagem" (ngSubmit)="postarProduto()">
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input type="text" name="nome" [(ngModel)]="nome" formControlName="nome"></ion-input>
+    </ion-item>
 
+    <ion-item>
+      <ion-label position="floating">Valor</ion-label>
+      <ion-input type="text" name="valor"  [(ngModel)]="valor"  formControlName="valor"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Quantidade</ion-label>
+      <ion-input type="number" name="qtd" [(ngModel)]="qtd"  formControlName="qtd"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Descrição</ion-label>
+      <ion-input type="text"  name="descricao" [(ngModel)]="descricao"  formControlName="descricao"></ion-input>
+    </ion-item>
+
+   
+
+    <div style="margin-top: 40px;">
+      <ion-button type="submit" expand="full"  color="danger">Publicar</ion-button>
+    </div>
+  </form>
+</ion-list>
 </ion-content>

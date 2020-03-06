@@ -6,8 +6,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UrlService {
-url = 'http://localhost/projetos/petshop/php/';
 
+   // url = 'http://pantaneirapetshop-com.umbler.net/php/';
+         url = 'http://localhost/projetos/petshop/php/';
   constructor( public alert: AlertController) { }
 
   getUrl() {

@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule, FormsModule} from '@angular/forms';
+import {Http , Headers , Response, ResponseOptions} from '@angular/http';
 import { IonicModule } from '@ionic/angular';
 
 import { CadastroProdutoPageRoutingModule } from './cadastro-produto-routing.module';
@@ -12,6 +13,7 @@ import { CadastroProdutoPage } from './cadastro-produto.page';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
     CadastroProdutoPageRoutingModule
   ],
